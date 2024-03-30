@@ -1,3 +1,20 @@
+
+# React-Redux Todo App
+A simple Todo application built with React and Redux, allowing users to manage their tasks efficiently.
+
+## Features
+1. Add new tasks
+2. Mark tasks as completed
+3. Remove tasks
+
+# Technologies Used
+1.React
+2.Redux
+3.HTML5
+4.CSS
+
+**Use:  "npm i react-feather" for Icons.**
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
