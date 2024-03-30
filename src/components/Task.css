@@ -1,0 +1,39 @@
+.task-app {
+  background-color: #f5f5f5; /* Light gray background */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 10px;
+}
+
+.task-title {
+  margin-bottom: 15px;
+  color: #333; /* Dark gray for title */
+}
+
+.add-task {
+  display: flex; /* Arrange input and button horizontally */
+  align-items: center; /* Align vertically */
+  margin-bottom: 15px;
+}
+
+.task-input {
+  flex-grow: 1; /* Allow input to grow and fill available space */
+  padding: 10px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.add-button {
+  border: none; /* Remove default button border */
+  background-color: #778899; /* Olive green background */
+  color: #fff; /* White text */
+  padding: 10px;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Indicate clickability */
+  margin-left: 10px; /* Spacing from input */
+}
+
+.add-button:hover {
+  background-color: #66778a; /* Darken green on hover */
+}
