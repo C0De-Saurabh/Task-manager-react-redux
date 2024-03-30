@@ -1,5 +1,5 @@
 import React from 'react'
-import { CheckSquare, Square, ToggleLeft, ToggleRight, Trash, X } from 'react-feather'
+import { CheckSquare, Square, ToggleLeft, ToggleRight, Trash} from 'react-feather'
 import { useDispatch } from 'react-redux'
 import { markCompleted, markIncomplete, removeTask, toggleTask } from '../redux/actions';
 import "./TaskItem.css";
@@ -17,7 +17,6 @@ const TaskItem = ({ task, index }) => {
       <div className="task-actions">
         <button className="task-toggle" onClick={() => dispatch(toggleTask(index))}>
           <p> 
-            {task.completed ? ' Toggle as Incomplete :    ' : ''}
             {task.completed ? <ToggleLeft /> : <ToggleRight />}
           </p>
         </button>

@@ -9,6 +9,8 @@
   transition: transform 0.1s ease-in-out; 
   font-weight: bold;
   justify-content: space-between;
+  /* max-height: fit-content;
+  max-width: fit-content; */
 }
 
 .task-card::before {
@@ -37,11 +39,12 @@
 
 .task-text {
   flex-grow: 1;
+  text-wrap: auto;
   color: #333; /* Dark gray text for task */
 }
 
 .task-text.completed {
-  text-decoration: line-through; /* Strikethrough text */
+  text-decoration: line-through; /* Strikethrough text for completed tasks */
 }
 
 .completed {
@@ -52,7 +55,6 @@
 .task-actions {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
 }
 
 .task-actions button {
@@ -60,26 +62,24 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-  align-items: center;
+  align-items: center; /* Not needed here, remove */
   color: #333; /* Dark gray text for buttons */
 }
 
-.task-actions button p{
-  display: flex;
+.task-actions button p {
+  display: flex; /* Display as inline-block for spacing */
   font-weight: bold;
-  margin-right: 10px;
-  font-size: 15px;
   align-items: center;
-  margin-left: 5px;
+  margin-right: 5px; /* Adjust spacing between text and icon */
+  font-size: 15px;
+  /* Removed align-items: center; */
 }
 
 .task-actions svg{
-  align-items: center;
-  margin-right: 10px;
-  padding: 2px;
+  padding: auto;
+  display: flex;
+  justify-content: right;
 }
-
-
 
 .task-card:hover {
   transform: translateX(2px) rotate(0.2deg); /* Slight movement on hover */

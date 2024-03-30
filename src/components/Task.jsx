@@ -14,14 +14,21 @@ const Task = () => {
       dispatch(addTask(text));
     };
   
+
     const handleAddTaskClick = () => {
       if (newTaskText.trim() !== '') {
         handleAddTask(newTaskText.trim());
         setNewTaskText('');
       }
-    };
-  
-  
+    }
+
+    
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' && newTaskText.trim() !== '') {
+      handleAddTaskClick();
+    }
+  };
+
     return (
       <div className="task-app"> {/* Main container */}
       <h2 className="task-title">TASK APP</h2> {/* Title */}
@@ -33,6 +40,7 @@ const Task = () => {
           placeholder="Add Task"
           value={newTaskText}
           onChange={(e) => setNewTaskText(e.target.value)}
+          onKeyDown={handleKeyDown}
         />
         <button className="add-button" onClick={handleAddTaskClick}>
           <Plus size={20} />
